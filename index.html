@@ -114,129 +114,81 @@ nav a:hover { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.4); }
 .hero-stats { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 .h-stat { background: var(--surface-dark); border: 1px solid var(--border-dark); padding: 10px 20px; border-radius: 20px; font-size: 13.5px; font-weight: 600; color: #d1d5db; display: flex; align-items: center; gap: 8px; }
 
-/* 
-===============================================
-=== SOFTWARE WORKSPACE SHOWCASE v2.0 ========
-===============================================
-This section replicates image_0.png, image_1.png, image_2.png
-*/
-.showcase { padding: 30px 6% 90px; text-align: center; }
-.window-frame {
-  max-width: 1050px; margin: 0 auto; background: var(--surface-dark);
-  border: 1px solid var(--border-dark); border-radius: var(--radius-xl);
-  padding: 16px; box-shadow: 0 40px 100px rgba(0,0,0,0.7); position: relative;
-  overflow: hidden; /* Important for embedded simulation */
-}
-.window-header { display: flex; align-items: center; justify-content: space-between; padding: 0 10px 14px; border-bottom: 1px solid var(--border-dark); margin-bottom: 14px; }
-.window-dots { display: flex; gap: 8px; }
-.window-dots span { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-.dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
-.window-title { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+/* Real Software Screenshots Gallery Section */
+.showcase { padding: 40px 6% 90px; text-align: center; }
+.section-title { text-align: center; max-width: 750px; margin: 0 auto 50px; }
+.section-title h3 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; color: #fff; margin-bottom: 12px; }
+.section-title p { color: var(--text-muted); font-size: 17px; }
 
-.window-content img { width: 100%; border-radius: var(--radius-md); display: block; transition: opacity 0.3s; }
-.window-content video { width: 100%; display: block; border-radius: var(--radius-md); margin-top: 20px;}
-
-/* Integrated Interactive Simulation Styles */
-.workspace-simulation {
-  display: none; /* Hidden by default */
-  width: 100%; height: 600px; /* Approximate height of dashboard */
-  background: var(--bg-dark);
-  border-radius: var(--radius-md);
-  margin-top: 20px;
-  overflow: hidden;
-  position: relative;
+.screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* Simulate the Login screen from image_1.png */
-.login-screen {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  width: 100%; height: 100%;
-  display: flex; justify-content: center; align-items: center;
-  position: absolute; top: 0; left: 0; z-index: 10;
-  transition: opacity 0.5s, transform 0.5s;
-}
-
-.login-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: var(--radius-lg);
-  width: 100%; max-width: 400px;
-  text-align: left;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-.login-card h3 { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 20px; text-align: center;}
-.login-card small { color: #60a5fa; font-size: 11px; letter-spacing: 1px; font-weight: 700;}
-
-.f-group { margin-bottom: 15px; text-align: left;}
-.f-group label { font-size: 13px; color: #d1d5db; margin-bottom: 6px; display: block; font-weight: 600;}
-.login-input {
-  width: 100%; padding: 12px 18px; border-radius: 8px; border: 1px solid var(--border-dark);
-  font-size: 14px; background: #030712; color: #fff;
-}
-.login-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-glow); outline: none;}
-
-.btn-login {
-  background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 8px;
-  width: 100%; font-weight: 700; cursor: pointer; transition: 0.2s;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-}
-.btn-login:hover { background: #1d4ed8;}
-
-/* Simulated Dashboard screen from image_2.png */
-.dashboard-screen {
-  width: 100%; height: 100%;
-  padding: 20px;
-  display: flex; flex-direction: column;
-}
-
-.sim-nav {
+.screenshot-card {
   background: var(--surface-dark);
   border: 1px solid var(--border-dark);
-  padding: 10px 15px;
-  border-radius: 10px;
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 20px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: var(--transition);
+  text-align: left;
 }
-.sim-brand { font-weight: 900; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 8px;}
-.sim-brand span { width: 24px; height: 24px; background: var(--primary); border-radius: 5px; display: inline-block; }
-.sim-user { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
-.sim-avatar { width: 30px; height: 30px; border-radius: 50%; background: #4b5563;}
 
-.sim-content { flex-grow: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-.sim-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border-dark);
-  border-radius: 10px;
+.screenshot-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 30px 60px rgba(37,99,235,0.2);
+}
+
+.window-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; background: rgba(0,0,0,0.3); border-bottom: 1px solid var(--border-dark);
+}
+.window-dots { display: flex; gap: 6px; }
+.window-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
+.window-title { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+.screenshot-img-wrap {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #000;
+}
+
+.screenshot-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.screenshot-card:hover .screenshot-img-wrap img {
+  transform: scale(1.05);
+}
+
+.screenshot-info {
   padding: 20px;
 }
-.sim-card h5 { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-.sim-card .metric-value { font-size: 24px; font-weight: 800; color: #fff; }
-.sim-card .metric-value span { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-left: 5px; }
 
-/* Button to toggle between image view and simulation */
-.toggle-sim {
-  margin-top: 20px;
-  background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;
-  padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 13px;
-  cursor: pointer; transition: 0.2s;
+.screenshot-info h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
 }
-.toggle-sim:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
 
-/* Simulation State Classes */
-.simulation-active .window-content { opacity: 0; pointer-events: none; }
-.simulation-active .workspace-simulation { display: block; }
-.logged-in .login-screen { opacity: 0; pointer-events: none; transform: translateY(-10px); }
-
-/* =============================================== */
+.screenshot-info p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
 
 /* Sections */
 .section { padding: 90px 6%; position: relative; }
-.section-title { text-align: center; max-width: 750px; margin: 0 auto 60px; }
-.section-title h3 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; color: #fff; margin-bottom: 12px; }
-.section-title p { color: var(--text-muted); font-size: 17px; }
 
 /* Business Grid */
 .b-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
@@ -258,12 +210,7 @@ This section replicates image_0.png, image_1.png, image_2.png
   background: var(--surface-dark); border: 1px solid var(--border-dark); padding: 36px 28px;
   border-radius: var(--radius-lg); transition: var(--transition); position: relative; overflow: hidden;
 }
-.feat-card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0; transition: var(--transition);
-}
 .feat-card:hover { border-color: #374151; transform: translateY(-8px); }
-.feat-card:hover::before { opacity: 1; }
 .feat-icon {
   width: 60px; height: 60px; background: rgba(37,99,235,0.1); color: #60a5fa;
   border-radius: 16px; display: flex; align-items: center; justify-content: center;
@@ -331,7 +278,7 @@ footer a { color: #34d399; text-decoration: none; font-weight: 700; }
   .hero h2 { font-size: 38px; }
   .ceo-box { flex-direction: column; text-align: center; padding: 30px; }
   nav { display: none; }
-  .workspace-simulation { height: 400px; } /* Adjust sim height for mobile */
+  .screenshots-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -349,7 +296,7 @@ footer a { color: #34d399; text-decoration: none; font-weight: 700; }
   </a>
   <nav>
     <a href="#">Home</a>
-    <a href="#demo">Live Showcase</a>
+    <a href="#gallery">Software Gallery</a>
     <a href="#business">Industries</a>
     <a href="#ceo">Leadership</a>
     <a href="#contact">Connect</a>
@@ -363,7 +310,7 @@ footer a { color: #34d399; text-decoration: none; font-weight: 700; }
   <p><b>SaleVix ONE POS</b> – Shop owners aur retailers ke liye sab se fast, secure aur 100% offline point-of-sale solution. Stock, Billing, aur Khata ab ek hi screen par.</p>
   
   <div class="btn-group">
-    <a class="btn btn-primary" href="#demo"><i class="fa-solid fa-play"></i> Watch Live Demo</a>
+    <a class="btn btn-primary" href="#gallery"><i class="fa-solid fa-images"></i> View Software Screenshots</a>
     <a class="btn btn-glass" href="https://wa.me/923219536312"><i class="fa-brands fa-whatsapp"></i> Start 3-Day Free Trial</a>
   </div>
 
@@ -374,90 +321,77 @@ footer a { color: #34d399; text-decoration: none; font-weight: 700; }
   </div>
 </section>
 
-<section class="showcase" id="demo">
+<!-- REAL SOFTWARE SCREENSHOTS GALLERY -->
+<section class="showcase" id="gallery">
   <div class="section-title">
-    <h3>Live Software Interface</h3>
-    <p>Aapke screens ke mutabiq tayyar kiya gaya simulation.</p>
+    <h3>Real Software Interface</h3>
+    <p>Aapke asli software ke screens aur workspace ka clean preview.</p>
   </div>
-  <div class="window-frame" id="showcaseWindow">
-    <div class="window-header">
-      <div class="window-dots">
-        <span class="dot-red"></span>
-        <span class="dot-yellow"></span>
-        <span class="dot-green"></span>
-      </div>
-      <div class="window-title">SaleVix ONE POS v1.0 — Live Simulation</div>
-      <div style="width: 40px;"></div>
-    </div>
+  
+  <div class="screenshots-grid">
     
-    <div class="window-content">
-      <!-- Static Image from image_0.png as fallback/default -->
-      <img src="salevix-one.png" alt="SaleVix ONE POS Workspace" id="staticImage">
-      
-      <!-- Integrated Simulation Container -->
-      <div class="workspace-simulation" id="liveSim">
-        
-        <!-- Simulate image_1.png (Login) -->
-        <div class="login-screen" id="simLoginScreen">
-          <div class="login-card">
-            <small>RETAIL WORKSPACE ACCESS</small>
-            <h3>Welcome to Salevix ONE</h3>
-            <div class="f-group">
-              <label>Username</label>
-              <input type="text" class="login-input" placeholder="admin1" value="admin1">
-            </div>
-            <div class="f-group">
-              <label>Password</label>
-              <input type="password" class="login-input" placeholder="•••••••••" value="password">
-            </div>
-            <button class="btn-login" onclick="simLogin()">Sign in to SaleVix →</button>
-          </div>
-        </div>
-        
-        <!-- Simulate image_2.png (Dashboard) -->
-        <div class="dashboard-screen">
-          <div class="sim-nav">
-            <div class="sim-brand"><span></span> SaleVix ONE</div>
-            <div class="sim-user">Welcome Back, Hamid! <div class="sim-avatar"></div></div>
-          </div>
-          <div class="sim-content">
-            <div class="sim-card">
-              <h5>Net Sales (PKR)</h5>
-              <div class="metric-value">Rs 8,000.00</div>
-            </div>
-            <div class="sim-card">
-              <h5>Sales Invoices</h5>
-              <div class="metric-value">1 <span>this month</span></div>
-            </div>
-            <div class="sim-card" style="grid-column: span 2;">
-              <h5>Sales Summary</h5>
-              <div style="height: 100px; color: var(--text-muted); font-size: 13px; text-align: center; padding-top: 30px;">[Chart Simulation]</div>
-            </div>
-          </div>
-        </div>
-        
+    <!-- Screenshot 1: Welcome / Role Selection -->
+    <div class="screenshot-card">
+      <div class="window-header">
+        <div class="window-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+        <div class="window-title">SaleVix ONE - Role Selection</div>
+      </div>
+      <div class="screenshot-img-wrap">
+        <img src="salevix-one.png" alt="SaleVix ONE Role Selection">
+      </div>
+      <div class="screenshot-info">
+        <h4>Role Selection Screen</h4>
+        <p>Aasani se Owner, Manager, ya Cashier ke tor par secure role selection.</p>
       </div>
     </div>
+
+    <!-- Screenshot 2: Login Screen -->
+    <div class="screenshot-card">
+      <div class="window-header">
+        <div class="window-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+        <div class="window-title">SaleVix ONE - Secure Login</div>
+      </div>
+      <div class="screenshot-img-wrap">
+        <img src="1000216485.jpg" alt="SaleVix ONE Login Screen">
+      </div>
+      <div class="screenshot-info">
+        <h4>Staff Access & Login</h4>
+        <p>Protected credentials aur offline SQLite database connectivity ke sath secure login.</p>
+      </div>
+    </div>
+
+    <!-- Screenshot 3: Main Dashboard -->
+    <div class="screenshot-card">
+      <div class="window-header">
+        <div class="window-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+        <div class="window-title">SaleVix ONE - Dashboard Workspace</div>
+      </div>
+      <div class="screenshot-img-wrap">
+        <img src="1000216487.jpg" alt="SaleVix ONE Dashboard">
+      </div>
+      <div class="screenshot-info">
+        <h4>Owner Dashboard & Metrics</h4>
+        <p>Net sales, invoices, daily profit aur top-selling products ka ek clear overview.</p>
+      </div>
+    </div>
+
+    <!-- Screenshot 4: Point of Sale (Checkout) -->
+    <div class="screenshot-card">
+      <div class="window-header">
+        <div class="window-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+        <div class="window-title">SaleVix ONE - Checkout / POS</div>
+      </div>
+      <div class="screenshot-img-wrap">
+        <img src="1000216489.jpg" alt="SaleVix ONE Checkout POS">
+      </div>
+      <div class="screenshot-info">
+        <h4>Super Fast Point of Sale</h4>
+        <p>Barcode scanning, quick billing, customer search aur instant receipt generation.</p>
+      </div>
+    </div>
+
   </div>
-  <p style="margin-top: 15px; color: var(--text-muted); font-size: 14px;">🎥 <b>Interactive Model:</b> Screen check karein ke Login ke baad Software kaisa lagta hai.</p>
-  <button class="toggle-sim" onclick="toggleSim()">Start Interactive Simulation</button>
 </section>
-
-<script>
-  const windowFrame = document.getElementById('showcaseWindow');
-  const staticImage = document.getElementById('staticImage');
-  const liveSim = document.getElementById('liveSim');
-  const loginScreen = document.getElementById('simLoginScreen');
-
-  function toggleSim() {
-    windowFrame.classList.toggle('simulation-active');
-    staticImage.style.display = windowFrame.classList.contains('simulation-active') ? 'none' : 'block';
-  }
-
-  function simLogin() {
-    liveSim.classList.add('logged-in');
-  }
-</script>
 
 <section class="section" style="background: rgba(17,24,39,0.4);" id="business">
   <div class="section-title">
