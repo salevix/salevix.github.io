@@ -3,72 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaleVix - In Perfect Hands | POS • Supermarket • Pharmacy • Grocery</title>
-<meta name="description" content="SaleVix builds secure, scalable platforms for shops and business - simplifying sales, stock, analytics, and growth for stores and supermarkets.">
-<meta name="keywords" content="SaleVix, POS System Pakistan, Supermarket Software, Pharmacy POS, Grocery POS, SaleVix github">
-<meta name="author" content="SaleVix">
+<title>SaleVix - In Perfect Hands | Education • Business • POS • Supermarket • Pharmacy</title>
+<meta name="description" content="SaleVix builds secure, scalable platforms for education and enterprise - simplifying sales, stock, analytics, and growth for stores, supermarkets and businesses. SaleVix - In Perfect Hands.">
+<meta name="keywords" content="SaleVix, SaleVix github, POS System Pakistan, Supermarket Software, Pharmacy POS, Business Solutions">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f8f9fa;color:#222}
-header{background:#0a1931;color:#fff;padding:20px 5%;display:flex;justify-content:space-between;align-items:center}
-header h1{font-size:28px} header h1 span{color:#00d4ff}
-nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:bold}
-.hero{background:#0a1931;color:#fff;padding:70px 5%;text-align:center}
-.hero h2{font-size:42px;line-height:1.2}
-.hero h2 span{color:#00d4ff}
-.hero p{margin:20px auto;max-width:650px;font-size:18px;color:#ddd}
-.btn{display:inline-block;background:#00d4ff;color:#000;padding:14px 28px;border-radius:30px;font-weight:bold;text-decoration:none;margin-top:10px}
-.section{padding:50px 5%;text-align:center}
-.section h3{font-size:30px;margin-bottom:10px}
-.cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-.card{background:#fff;padding:25px;border-radius:15px;width:280px;box-shadow:0 5px 20px rgba(0,0,0,0.08);text-align:left}
-.card h4{font-size:20px;margin-bottom:10px;color:#0a1931}
-.card p{color:#555;line-height:1.6}
-.features{background:#fff}
-footer{background:#0a1931;color:#fff;padding:30px 5%;text-align:center}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fff;color:#222;line-height:1.7}
+header{background:#0a1931;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+header h1{font-size:30px;letter-spacing:1px} header h1 span{color:#00d4ff}
+nav a{color:#fff;text-decoration:none;margin-left:22px;font-weight:600;font-size:15px}
+.hero{position:relative;height:520px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80') center/cover}
+.hero::after{content:'';position:absolute;inset:0;background:rgba(5,20,45,0.75)}
+.hero-text{position:relative;z-index:2;padding:20px;max-width:900px}
+.hero-text small{background:#00d4ff;color:#000;padding:6px 14px;border-radius:20px;font-weight:700}
+.hero-text h2{font-size:48px;line-height:1.15;margin:18px 0}
+.hero-text h2 span{color:#00d4ff}
+.hero-text p{font-size:18px;color:#ddd;max-width:750px;margin:0 auto}
+.btn{display:inline-block;background:#00d4ff;color:#000;padding:14px 30px;border-radius:30px;font-weight:800;text-decoration:none;margin:12px 8px}
+.btn2{background:#fff;color:#0a1931}
+.section{padding:65px 6%}
+.center{text-align:center;max-width:850px;margin:0 auto}
+.center h3{font-size:34px;color:#0a1931}
+.center p{color:#666;margin-top:12px;font-size:17px}
+.about{display:flex;gap:40px;align-items:center;flex-wrap:wrap;background:#f8f9fa}
+.about img{width:100%;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.15)}
+.about>div{flex:1;min-width:300px}
+.about h3{font-size:36px;color:#0a1931;line-height:1.2}
+.about p{color:#555;margin:14px 0}
+.tick{list-style:none;margin-top:10px}
+.tick li{margin:8px 0;font-weight:600}
+.tick li:before{content:'✔ ';color:#00b894}
+.grid{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:35px}
+.card{background:#fff;border:1px solid #eee;padding:28px;border-radius:18px;width:310px;box-shadow:0 8px 25px rgba(0,0,0,0.06);text-align:left}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:15px}
+.card h4{font-size:21px;color:#0a1931}
+.card p{color:#666;margin-top:8px;font-size:15px}
+.stats{background:#0a1931;color:#fff;display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;padding:45px 6%}
+.stats div{margin:10px}
+.stats b{font-size:38px;color:#00d4ff;display:block}
+.gallery{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+.gallery img{width:320px;height:210px;object-fit:cover;border-radius:14px}
+.vision{background:#eef6ff}
+.vision-box{background:#fff;padding:35px;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,0.06)}
+.contact{background:#0a1931;color:#fff;text-align:center}
+.contact h3{font-size:34px}
+.contact p{color:#ccc;margin:12px auto;max-width:650px}
+footer{background:#060f22;color:#aaa;text-align:center;padding:25px}
 footer a{color:#00d4ff;text-decoration:none}
+@media(max-width:700px){.hero-text h2{font-size:30px} nav{display:none} .hero{height:460px}}
 </style>
 </head>
 <body>
 
-<header>
-<h1>Sale<span>Vix</span></h1>
-<nav>
-<a href="#">Home</a>
-<a href="#features">Features</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+<header><h1>Sale<span>Vix</span></h1><nav><a href="#">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#business">Business</a><a href="#contact">Contact</a></nav></header>
 
 <div class="hero">
-<h2>SaleVix - In Perfect Hands<br><span>POS • Supermarket • Pharmacy • Grocery</span></h2>
-<p>SaleVix builds secure, scalable platforms for education and enterprise - simplifying sales, stock, analytics, and growth for shops and stores.</p>
-<a class="btn" href="#features">Explore SaleVix →</a>
-</div>
-
-<div class="section" id="features">
-<h3>Why Choose SaleVix?</h3>
-<p>Everything your shop needs in one simple system.</p>
-<div class="cards">
-<div class="card"><h4>🛒 Supermarket POS</h4><p>Fast billing, barcode scanning, daily sales report and easy stock management for your supermarket.</p></div>
-<div class="card"><h4>💊 Pharmacy POS</h4><p>Medicine stock, expiry alert, batch management and customer record - perfect for medical stores.</p></div>
-<div class="card"><h4>🏪 Grocery & Kiryana</h4><p>Udhaar khata, daily hisab, and simple interface for small shops. No training needed.</p></div>
-<div class="card"><h4>📊 Smart Analytics</h4><p>See which product sells most, daily profit, and monthly growth - all in one dashboard.</p></div>
-<div class="card"><h4>🔒 Secure & Fast</h4><p>Your data is safe and secure. Works fast even on slow internet and mobile.</p></div>
-<div class="card"><h4>📱 Works Everywhere</h4><p>Mobile, Laptop, Tablet - SaleVix works on all devices, anytime, anywhere.</p></div>
+<div class="hero-text">
+<small>★ TRUSTED BUSINESS PLATFORM ★</small>
+<h2>SaleVix - In Perfect Hands<br><span>Education • Business • Technology</span></h2>
+<p>SaleVix builds secure, scalable platforms for education and enterprise - simplifying sales, stock, analytics, and growth for stores, supermarkets, pharmacies and modern businesses across Pakistan and beyond.</p>
+<a class="btn" href="#services">Explore Our Business →</a>
+<a class="btn btn2" href="#contact">Contact Us</a>
 </div>
 </div>
 
-<div class="section features">
-<h3>Built For Pakistani Shops</h3>
-<p style="max-width:700px;margin:15px auto;line-height:1.8;color:#555">Whether you have a small kiryana store in Vehari or a big supermarket in Lahore - SaleVix is made for you. Simple Urdu + English design, easy to use, and affordable for everyone.</p>
-<a class="btn" href="#contact">Get SaleVix Now</a>
+<div class="section center">
+<h3>Welcome To SaleVix</h3>
+<p><b>SaleVix is not just a software. It is a complete business ecosystem.</b> We help small shops become big brands. From a small kiryana store in Burewala to a large supermarket in Lahore, SaleVix provides the technology, the system and the support to grow faster, smarter and stronger.</p>
+<p style="margin-top:12px">Our mission is simple - <b>Make Every Business Digital, Smart and Successful.</b> With advanced POS, inventory management, customer analytics and cloud technology, we are building the future of retail in Pakistan.</p>
 </div>
 
-<footer id="contact">
-<h3>SaleVix - In Perfect Hands</h3>
-<p style="margin:10px 0">Contact Us: salevix@gmail.com | Vehari, Pakistan</p>
-<p>© 2026 SaleVix. All Rights Reserved. | <a href="https://salevix.github.io">salevix.github.io</a></p>
+<div class="section about" id="about">
+<div><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="SaleVix Office"></div>
+<div>
+<h3>About SaleVix<br>Building The Future Of Business</h3>
+<p>Founded with a vision to empower local businesses, SaleVix is now becoming one of the most trusted names in retail technology. Our team of developers, designers and business experts work together to create solutions that are simple, powerful and affordable.</p>
+<ul class="tick">
+<li>Secure Cloud Based System - Your Data Is Always Safe</li>
+<li>Fast Billing & Barcode System For Supermarkets</li>
+<li>Complete Stock & Expiry Management For Pharmacy</li>
+<li>Daily Sales Report, Profit & Growth Analytics</li>
+<li>Works On Mobile, Laptop & Tablet - Anywhere, Anytime</li>
+</ul>
+<a class="btn" href="#services" style="margin-top:18px">Learn More About Us</a>
+</div>
+</div>
+
+<div class="stats">
+<div><b>500+</b>Happy Shops</div>
+<div><b>50,000+</b>Daily Transactions</div>
+<div><b>12+</b>Cities In Pakistan</div>
+<div><b>99.9%</b>Uptime & Security</div>
+</div>
+
+<div class="section" id="services">
+<div class="center"><h3>Our Premium Services</h3><p>We provide complete digital solutions for every type of business. Choose the service that fits your shop.</p></div>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"><h4>🛒 Supermarket POS</h4><p>Fast billing, barcode scanning, customer queue management, and real-time stock update. Perfect for supermarkets and mega stores. Increase your sales speed by 3x with SaleVix POS.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"><h4>💊 Pharmacy POS</h4><p>Medicine stock, batch number, expiry alert, and prescription record. Never miss an expiry date again. Trusted by medical stores and pharmacies across Pakistan.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"><h4>🏪 Grocery & Kiryana Store</h4><p>Udhaar Khata, daily hisab, and simple interface in Urdu + English. No training needed. Even your 60-year-old uncle can use it easily.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"><h4>📊 Business Analytics</h4><p>See which product sells most, which day is best, monthly profit, and customer behaviour. Make smart decisions with real data, not guesswork.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80"><h4>🤝 Business Consulting</h4><p>We don't just give software, we give business growth strategy. How to increase customers, how to manage staff, how to scale your shop to a brand.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"><h4>💻 Web & App Development</h4><p>Custom websites, online stores, and mobile apps for your business. Take your shop online and sell to the whole Pakistan.</p></div>
+</div>
+</div>
+
+<div class="section vision" id="business">
+<div class="center"><h3>Our Business Vision</h3><p>At SaleVix, we believe every small shop has the potential to become a big brand. Our corporate office, our team and our technology are all focused on one goal - Your Growth.</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80">
+</div>
+<div class="center" style="margin-top:35px"><div class="vision-box"><h3 style="font-size:24px">Why Top Businesses Trust SaleVix?</h3><p style="color:#555;margin-top:10px">Because we deliver <b>Quality, Security and Results.</b> Our system is used by supermarkets, pharmacies, grocery stores, restaurants, and educational institutes. We provide 24/7 support, free training, and lifetime updates. When you join SaleVix, you don't just buy software - you join a family of successful business owners.</p><p style="margin-top:12px"><b>“SaleVix - In Perfect Hands”</b> is not just a slogan. It is our promise.</p></div></div>
+</div>
+
+<div class="section center">
+<h3>What Our Clients Say</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<p style="font-style:italic;font-size:19px">“SaleVix ne meri shop ko bilkul change kar diya. Pehle hisab kitab me bohat pareshani thi, ab sab kuch mobile pe nazar aata hai. Sales bhi barh gayi hai.”</p>
+<p style="margin-top:10px"><b>- Ahmed Raza, Owner - Al-Noor Supermarket, Burewala</b></p>
+</div>
+
+<div class="section contact" id="contact">
+<h3>Let's Grow Your Business Together</h3>
+<p>Ready to take your shop to the next level? Contact SaleVix today for a free demo. Our team will visit your shop, understand your business, and give you the best solution.</p>
+<p style="font-size:20px;color:#fff"><b>Email:</b> salevix@gmail.com | <b>Location:</b> Burewala, Vehari, Pakistan</p>
+<a class="btn" href="mailto:salevix@gmail.com">Get Free Demo →</a>
+<p style="margin-top:20px;font-size:14px">Join 500+ Successful Businesses - Join SaleVix Today</p>
+</div>
+
+<footer>
+<p>© 2026 SaleVix. All Rights Reserved. | SaleVix - In Perfect Hands | <a href="https://salevix.github.io">salevix.github.io</a></p>
+<p style="margin-top:6px">Education • Business • Technology • POS • Supermarket • Pharmacy</p>
 </footer>
 
 </body>
