@@ -3,115 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaleVix - In Perfect Hands | #1 POS, Supermarket, Pharmacy & Business Platform in Pakistan</title>
-<meta name="description" content="SaleVix - In Perfect Hands. Pakistan's most trusted POS for Supermarket, Pharmacy, Grocery, Restaurant & Business. Fast Billing, Stock, Analytics. Join 500+ Shops.">
+<title>SaleVix ONE - Every Sale. Every Detail. One Workspace. | SaleVix Company</title>
+<meta name="description" content="SaleVix ONE by SaleVix Company - The First Offline, Fast & Secure POS. Used for all businesses - Pharmacy, Grocery, Kiryana, Pesticides, Garment, Cosmetics. Every Sale. Every Detail. One Workspace.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 html{scroll-behavior:smooth}
 body{background:#fff;color:#222;line-height:1.7}
-.topbar{background:#00d4ff;text-align:center;padding:8px;font-weight:700;font-size:14px}
-header{background:#0a1931;color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 5px 20px rgba(0,0,0,.2)}
+.topbar{background:#00d4ff;text-align:center;padding:9px;font-weight:800;font-size:14px;color:#000}
+header{background:#071a3a;color:#fff;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
 header h1{font-size:32px} header h1 span{color:#00d4ff}
 nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:600}
-nav a:hover{color:#00d4ff}
-.hero{background:linear-gradient(rgba(5,15,35,.85),rgba(5,15,35,.75)),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1400&q=80') center/cover;color:#fff;padding:90px 6%;text-align:center}
-.hero small{background:#00d4ff;color:#000;padding:7px 16px;border-radius:20px;font-weight:800}
-.hero h2{font-size:52px;line-height:1.1;margin:20px 0}
-.hero h2 span{color:#00d4ff}
-.hero p{max-width:800px;margin:0 auto;color:#ddd;font-size:18px}
-.btn{display:inline-block;background:#00d4ff;color:#000;padding:15px 32px;border-radius:30px;font-weight:800;text-decoration:none;margin:10px 6px}
-.btn2{background:#fff;color:#0a1931}
-.marquee{background:#0a1931;color:#00d4ff;padding:12px;text-align:center;font-weight:700;letter-spacing:1px;overflow:hidden;white-space:nowrap}
+.hero{background:linear-gradient(115deg,#04122e 0%,#0a2a6b 55%,#00a8c5 100%);color:#fff;padding:80px 6%;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.hero>div{flex:1;min-width:320px}
+.hero small{color:#7ee8fa;letter-spacing:2px;font-weight:700;font-size:13px}
+.hero h2{font-size:54px;line-height:1.05;margin:15px 0}
+.hero h2 span{color:#6ee7ff}
+.hero p{color:#ddd;font-size:17px;max-width:600px}
+.hero .tags{margin-top:20px;color:#fff;font-weight:700;letter-spacing:1px;font-size:13px}
+.btn{display:inline-block;background:#00d4ff;color:#000;padding:15px 32px;border-radius:30px;font-weight:800;text-decoration:none;margin:12px 8px 0 0}
+.btn2{background:#fff;color:#071a3a}
+.login-box{background:#fff;color:#222;border-radius:20px;padding:32px;max-width:420px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.login-box h3{font-size:28px}
+.login-box p{color:#888;font-size:14px;margin:6px 0 20px}
+.role{background:#f1f3f5;padding:15px 18px;border-radius:12px;margin:10px 0;font-weight:600;color:#444}
+.role b{color:#111}
 .section{padding:70px 6%}
 .center{text-align:center;max-width:900px;margin:0 auto}
-.center h3{font-size:36px;color:#0a1931}
+.center h3{font-size:36px;color:#071a3a}
 .center p{color:#666;margin-top:12px;font-size:17px}
-.flex{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
-.flex>div{flex:1;min-width:300px}
-.flex img{width:100%;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
-.flex h3{font-size:38px;color:#0a1931;line-height:1.2}
-.flex p{color:#555;margin:14px 0}
-.tick{list-style:none}
-.tick li{margin:9px 0;font-weight:600}
-.tick li:before{content:'✅ '}
 .grid{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:35px}
-.card{background:#fff;border:1px solid #eee;padding:0 0 25px;border-radius:20px;width:330px;box-shadow:0 10px 30px rgba(0,0,0,.07);overflow:hidden;transition:.3s}
-.card:hover{transform:translateY(-8px)}
+.card{background:#fff;border:1px solid #eee;padding:0 0 24px;border-radius:20px;width:330px;box-shadow:0 10px 30px rgba(0,0,0,.07);overflow:hidden}
 .card img{width:100%;height:200px;object-fit:cover}
-.card h4{font-size:21px;color:#0a1931;padding:15px 20px 0}
+.card h4{font-size:21px;color:#071a3a;padding:15px 20px 0}
 .card p{color:#666;padding:8px 20px;font-size:15px}
-.card a{color:#0088aa;font-weight:700;text-decoration:none;padding:0 20px}
-.stats{background:linear-gradient(90deg,#0a1931,#0d2a55);color:#fff;display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;padding:50px 6%}
-.stats b{font-size:42px;color:#00d4ff;display:block}
-.stats span{color:#ddd}
-.pricing{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:35px}
-.price{background:#fff;border:2px solid #eee;border-radius:20px;width:320px;padding:30px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.price.popular{border-color:#00d4ff;background:#0a1931;color:#fff;transform:scale(1.03)}
-.price h4{font-size:22px}
-.price b{font-size:38px;display:block;margin:12px 0}
-.price p{color:#666;font-size:15px}
-.price.popular p{color:#ddd}
-.price ul{list-style:none;text-align:left;margin:15px 0}
-.price li{margin:8px 0}
-.team{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:35px}
-.member{text-align:center;width:220px}
-.member img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:4px solid #00d4ff}
-.member h4{margin-top:12px}
-.member p{color:#666;font-size:14px}
-.faq{max-width:800px;margin:30px auto;text-align:left}
-.faq div{background:#f8f9fa;padding:18px;border-radius:12px;margin:12px 0}
-.faq b{color:#0a1931}
+.features{background:#f8f9fa}
+.feat{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+.feat div{background:#fff;padding:25px;border-radius:16px;width:260px;box-shadow:0 8px 20px rgba(0,0,0,.05);text-align:center}
+.feat b{font-size:19px;color:#071a3a;display:block;margin:10px 0 6px}
+.feat p{color:#666;font-size:14px}
+.stats{background:#071a3a;color:#fff;display:flex;justify-content:space-around;flex-wrap:wrap;text-align:center;padding:50px 6%}
+.stats b{font-size:40px;color:#00d4ff;display:block}
 .gallery{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px}
 .gallery img{width:320px;height:210px;object-fit:cover;border-radius:14px}
-.testi{background:#f0f7ff;padding:30px;border-radius:18px;margin:15px auto;max-width:750px}
-.contact{background:linear-gradient(rgba(5,15,35,.92),rgba(5,15,35,.92)),url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80') center/cover;color:#fff;text-align:center;padding:70px 6%}
-.contact h3{font-size:38px}
-.contact p{color:#ddd;max-width:650px;margin:14px auto}
+.ceo{display:flex;gap:40px;align-items:center;flex-wrap:wrap;background:#eef6ff;border-radius:20px;padding:35px}
+.ceo img{width:280px;height:280px;object-fit:cover;border-radius:50%;border:6px solid #00d4ff}
+.ceo h3{font-size:34px;color:#071a3a}
+.ceo p{color:#555;margin:10px 0}
+.trial{background:linear-gradient(90deg,#071a3a,#0a4a7a);color:#fff;text-align:center;padding:60px 6%;border-radius:20px}
+.trial h3{font-size:36px}
+.trial p{color:#ddd;max-width:700px;margin:12px auto}
+.contact{background:#071a3a;color:#fff;text-align:center;padding:70px 6%}
+.contact h3{font-size:36px}
+.contact p{color:#ccc;max-width:650px;margin:12px auto}
 input,textarea{width:100%;max-width:500px;padding:14px;border-radius:10px;border:none;margin:7px 0;font-size:16px}
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:50px;font-weight:800;text-decoration:none;z-index:999;box-shadow:0 8px 20px rgba(0,0,0,.3)}
-footer{background:#060f22;color:#aaa;text-align:center;padding:30px 6%}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 22px;border-radius:50px;font-weight:800;text-decoration:none;z-index:999;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+footer{background:#040e22;color:#aaa;text-align:center;padding:30px 6%}
 footer a{color:#00d4ff;text-decoration:none}
-@media(max-width:700px){.hero h2{font-size:32px} nav{display:none} .flex h3{font-size:28px}}
+@media(max-width:700px){.hero h2{font-size:36px} nav{display:none}}
 </style>
 </head>
 <body>
-<div class="topbar">🔥 SPECIAL OFFER: First 1 Month FREE Trial For All New Shops In Burewala & Vehari! 🔥</div>
-<header><h1>Sale<span>Vix</span></h1><nav><a href="#">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#team">Team</a><a href="#contact">Contact</a></nav></header>
+<div class="topbar">✨ SaleVix ONE is LIVE - Get Your FREE 3 Days Trial Today - No Card Required ✨</div>
+<header><h1>Sale<span>Vix</span></h1><nav><a href="#">Home</a><a href="#about">About</a><a href="#business">Businesses</a><a href="#features">Features</a><a href="#ceo">CEO</a><a href="#contact">Contact</a></nav></header>
 
 <div class="hero">
-<small>★ PAKISTAN'S TRUSTED BUSINESS PLATFORM ★</small>
-<h2>SaleVix - In Perfect Hands<br><span>Grow Your Business 3X Faster</span></h2>
-<p>SaleVix builds secure, scalable platforms for education and enterprise. We simplify sales, stock, analytics, and growth for Supermarkets, Pharmacies, Grocery Stores, Restaurants & Modern Businesses.</p>
-<a class="btn" href="#pricing">Start FREE Trial →</a><a class="btn btn2" href="#about">Watch How It Works</a>
-<p style="margin-top:18px;font-size:14px">⭐⭐⭐⭐⭐ Rated 4.9/5 by 500+ Shop Owners | No Credit Card Required</p>
+<div>
+<small>A CLEARER VIEW OF YOUR BUSINESS</small>
+<h2>Every sale.<br>Every detail.<br><span>One workspace.</span></h2>
+<p>A thoughtful retail experience, made for the way you work.</p>
+<p style="margin-top:12px"><b>SaleVix ONE</b> - The First Software by <b>SaleVix Company</b>. The First <b>Offline Version</b> - Fast, Secure and Perfect Handling of All Things in One Workplace.</p>
+<div class="tags">POINT OF SALE &nbsp;•&nbsp; INVENTORY &nbsp;•&nbsp; CUSTOMER LEDGER</div>
+<a class="btn" href="#contact">Start 3 Days FREE Trial →</a><a class="btn btn2" href="#business">See All Businesses</a>
 </div>
-<div class="marquee">SUPERMARKET POS &nbsp;•&nbsp; PHARMACY POS &nbsp;•&nbsp; GROCERY POS &nbsp;•&nbsp; RESTAURANT POS &nbsp;•&nbsp; BUSINESS ANALYTICS &nbsp;•&nbsp; CLOUD SYSTEM</div>
-
-<div class="section center"><h3>Welcome To The Future Of Business</h3><p><b>SaleVix is not just software. It is your Business Partner.</b><br>Imagine a shop where billing takes 5 seconds, stock never finishes without warning, udhaar khata is automatic, and you can see your daily profit on your mobile while sitting at home. That is SaleVix. From a small kiryana store in Burewala to a big mega mart in Lahore, we make every business smart, digital and profitable.</p></div>
-
-<div class="section flex" id="about" style="background:#f8f9fa">
-<div><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80"></div>
-<div><h3>About SaleVix<br>We Build Brands,<br>Not Just Software.</h3><p>SaleVix was started with one dream - <b>Har choti dukan ko bari brand banana.</b> Today our system is used in 12+ cities. Our team of developers, business experts and support staff work day and night for your success.</p><ul class="tick"><li>100% Secure Cloud - Data kabhi zaya nahi hoga</li><li>Offline Mode - Internet na ho tab bhi chalega</li><li>Urdu + English - Sab ke liye aasan</li><li>Free Training + 24/7 WhatsApp Support</li><li>Lifetime Updates - Hamesha naya feature</li></ul></div>
+<div class="login-box">
+<h3>Select your role</h3>
+<p>Choose your assigned role to continue.</p>
+<div class="role">Owner / Admin</div>
+<div class="role">Manager</div>
+<div class="role">Cashier</div>
+<div class="role">Viewer</div>
+<p style="font-size:12px;color:#999;margin-top:15px">SaleVix Retail Edition - Thoughtfully designed for your business.</p>
+</div>
 </div>
 
-<div class="stats"><div><b>500+</b><span>Happy Shops</span></div><div><b>1,00,000+</b><span>Daily Bills</span></div><div><b>12+</b><span>Cities</span></div><div><b>4.9/5</b><span>Customer Rating</span></div></div>
+<div class="section center" id="about">
+<h3>Welcome To SaleVix Company</h3>
+<p><b>SaleVix</b> is a modern software company building simple, powerful and secure tools for real businesses.</p>
+<p style="margin-top:12px">Our first product - <b>SaleVix ONE</b> - is made for every shop owner who wants everything in one place. No more registers, no more copies, no more tension. Billing, Stock, Udhaar, Customer Record, Daily Profit - <b>All Things In One Workplace.</b></p>
+<p style="margin-top:12px">SaleVix ONE is <b>100% Offline</b>. Internet ho ya na ho, aapki shop kabhi nahi rukegi. Fast, Secure and Perfect Handling - Yehi hamara wada hai.</p>
+</div>
 
-<div class="section" id="services"><div class="center"><h3>Our Premium Services</h3><p>Har business ke liye alag solution. Apni shop ke hisab se choose karo.</p></div>
+<div class="section features" id="features">
+<div class="center"><h3>Why SaleVix ONE Is Different?</h3><p>First Offline Version - Built for Pakistani & International Businesses.</p></div>
+<div class="feat">
+<div><div style="font-size:40px">⚡</div><b>Super Fast & Offline</b><p>No internet needed. Billing in 2 seconds. Your shop never stops.</p></div>
+<div><div style="font-size:40px">🔒</div><b>Secure & Safe</b><p>Your data is 100% safe. Auto backup. Only you can see your data.</p></div>
+<div><div style="font-size:40px">📦</div><b>Perfect Stock Handling</b><p>Stock, expiry, batch, low stock alert - sab automatic.</p></div>
+<div><div style="font-size:40px">📒</div><b>Customer Ledger / Udhaar</b><p>Kis ne kitna dena hai, kis ne de diya - sab clear.</p></div>
+<div><div style="font-size:40px">👥</div><b>Roles - Owner, Manager, Cashier</b><p>Har bande ko uska kaam. Owner ko full control, Cashier ko sirf billing.</p></div>
+<div><div style="font-size:40px">📊</div><b>Every Sale, Every Detail</b><p>Daily sales, profit, best selling product - ek click pe.</p></div>
+<div><div style="font-size:40px">🇵🇰</div><b>Urdu + English</b><p>Simple design. Koi bhi aasani se use kar sakta hai.</p></div>
+<div><div style="font-size:40px">🖥️</div><b>One Workspace</b><p>POS + Inventory + Ledger - All in One Software.</p></div>
+</div>
+</div>
+
+<div class="stats"><div><b>1</b><span>Powerful Software - SaleVix ONE</span></div><div><b>8+</b><span>Business Types Supported</span></div><div><b>100%</b><span>Offline & Secure</span></div><div><b>3 Days</b><span>FREE Trial</span></div></div>
+
+<div class="section" id="business">
+<div class="center"><h3>Used For All Businesses</h3><p>One Software - For Whole Businesses. Chahe choti dukan ho ya bara store, SaleVix ONE sab ke liye hai.</p></div>
 <div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"><h4>🛒 Supermarket POS</h4><p>Super fast billing, barcode, scale integration, daily report. Supermarket ke liye best system. Sales 3x fast.</p><a href="#pricing">View Pricing →</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"><h4>💊 Pharmacy POS</h4><p>Medicine expiry alert, batch, salt wise search, prescription record. Medical store ke liye No.1 choice.</p><a href="#pricing">View Pricing →</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"><h4>🏪 Kiryana & Grocery POS</h4><p>Udhaar Khata, daily hisab, customer SMS. Choti dukan ke liye sab se aasan system.</p><a href="#pricing">View Pricing →</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"><h4>🍔 Restaurant & Cafe POS</h4><p>Table management, KOT, online order, rider tracking. Hotel aur cafe ke liye complete solution.</p><a href="#pricing">View Pricing →</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"><h4>📊 Smart Analytics</h4><p>Konsi cheez sab se zyada bikti hai? Konsa din best hai? Monthly profit? Sab kuch ek dashboard pe.</p><a href="#pricing">View Pricing →</a></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"><h4>🌐 Website & Online Store</h4><p>Apni shop ka online store banao. Poora Pakistan se order lo. Facebook + WhatsApp se sale barhao.</p><a href="#pricing">View Pricing →</a></div>
-</div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"><h4>💊 Pharmacy / Medical Store</h4><p>Medicine stock, expiry alert, batch & salt wise search. Pharmacy ke liye perfect handling.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"><h4>🏪 Grocery Store</h4><p>Daily items, fast billing, barcode. Grocery ke liye super fast system.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"><h4>🛒 Supermarket</h4><p>Multiple counters, barcode, scale, daily report. Big store ke liye complete solution.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?w=800&q=80"><h4>🌾 Kiryana Store</h4><p>Udhaar Khata, daily hisab, simple Urdu interface. Kiryana ke liye sab se aasan.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80"><h4>🧪 Pesticides / Agri Store</h4><p>Fasal ki dawai, seed, fertilizer stock. Kisan aur dealer ka hisab clear.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80"><h4>👕 Garment / Cloth Store</h4><p>Size, colour, variety wise stock. Kapre wali dukan ke liye perfect.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80"><h4>💄 Cosmetics Store</h4><p>Beauty products, expiry, brand wise stock. Cosmetics shop ke liye smart system.</p></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80"><h4>🏢 Whole Businesses</h4><p>Restaurant, Mobile Shop, Hardware, Book Shop - Har business ke liye ek hi software - SaleVix ONE.</p></div>
+</div>
+</div>
 
-<div class="section" style="background:#f8f9fa"><div class="center"><h3>Our Corporate Office & Business Gallery</h3><p>We are a professional company with a professional vision. Dekho hamara kaam, hamari team, hamara style.</p></div><div class="gallery"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80"></div></div>
+<div class="section" style="padding-top:0">
+<div class="center"><h3>Our Business Gallery</h3><p>Professional Company - Professional Vision.</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80">
+<img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80">
+</div>
+</div>
 
-<div class="section" id="pricing"><div class="center"><h3>Simple & Affordable Pricing</h3><p>Choti dukan se bari supermarket tak - sab ke liye plan hai. No hidden charges.</p></div><div class="pricing">
-<div class="price"><h4>Basic - Kiryana</h4><b>Rs 1,499 / Month</b><p>Choti dukan ke liye best</p><ul><li>✅ 1 Counter Billing</li><li>✅ Udhaar Khata</li><li>✅ Stock Management</li><li>✅ Daily Report</li><li>✅ Mobile App</li></ul><a class="btn" href="#contact">Choose Basic</a></div>
-<div class="price popular"><h4>⭐ Pro - Most Popular</h4><b>Rs 2,999 / Month</b><p>Supermarket & Pharmacy ke liye</p><ul><li>✅ Sab kuch Basic wala +</li><li>✅ Barcode + Expiry Alert</li><li>✅ 3 Counters + Staff Login</li><li>✅ Analytics Dashboard</li><li>✅ WhatsApp Support 24/7</li></ul><a class="btn" href="#contact">Choose Pro - FREE 1 Month</a></div>
-<div class="price"><h4>Business - VIP</h4><b>Rs 5,999 / Month</b><p>Chain & Big Stores ke liye</p><ul><li>✅ Sab kuch Pro wala +</li><li>✅ Unlimited Branches</li><li>✅ Online Store + Website</li><li>✅ Custom Features</li><li>✅ Dedicated Manager</li></ul><a class="btn" href="#contact">Choose VIP</a></div>
-</div></div>
+<div class="section" style="padding-top:0">
+<div class="center"><h3>What Our Clients Say</h3></div>
+<div style="max-width:750px;margin:25px auto;background:#f0f7ff;padding:30px;border-radius:18px;text-align:center"><p style="font-size:19px;font-style:italic">“SaleVix ONE ne meri shop ko bilkul change kar diya. Pehle sab kuch copy pe tha, ab Every Sale, Every Detail ek hi jagah pe hai. Offline bhi chalta hai, bohat fast hai.”</p><p style="margin-top:12px"><b>- Ahmed Raza, Al-Noor Supermarket, Burewala</b> ⭐⭐⭐⭐⭐</p></div>
+</div>
 
-<div class="section" id="team" style="background:#f8f9fa"><div class="center"><h3>Meet Our Expert Team</h3><p>SaleVix ke peeche mehnati aur talented log hain jo aapki success ke liye kaam karte hain.</p></div><div class="team"><div class="member"><img src="https
+<div class="section" style="padding-top:0" id="ceo">
+<div class="ceo">
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80">
+<div>
+<small style="color:#0088aa;font-weight:800;letter-spacing:2px">CEO & DEVELOPER</small>
+<h3>Muhammad Hamid</h3>
+<p><b>Founder, CEO & Developer - SaleVix Company</b></p>
+<p>Muhammad Hamid is the vision behind SaleVix ONE. With a mission to make every small business digital, smart and successful, he designed SaleVix ONE as a thoughtful retail experience - made for the way you work.</p>
+<p><b>“My dream is simple - Har dukan ka hisab clear ho, har sale ka record safe ho, aur har business owner ko ek clearer view of his business mile. That is SaleVix ONE.”</b></p>
+<p>- Muhammad Hamid, CEO & Developer, SaleVix</p>
+</div>
+</div>
+</div>
+
+<div class="section" style="padding-top:0">
+<div class="trial">
+<h3>Try SaleVix ONE - FREE For 3 Days</h3>
+<p>No Payment. No Card. Sirf 3 Din FREE Trial lo, apni shop pe chalao, aur khud faisla karo. Agar pasand aaye to continue karo.</p>
+<a class="btn" href="https://wa.me/923219536312">Get 3 Days FREE Trial On WhatsApp →</a>
+<p style="font-size:14px;margin-top:15px">Limited Offer - Start Today</p>
+</div>
+</div>
+
+<div class="contact" id="contact">
+<h3>Contact SaleVix Company</h3>
+<p>Ready to make your business smart? Contact us today for FREE Demo & 3 Days Trial.</p>
+<form><input type="text" placeholder="Aapka Naam"><br><input type="text" placeholder="Shop / Business Ka Naam - Pharmacy / Grocery / Kiryana / Pesticides / Garment / Cosmetics"><br><input type="text" placeholder="Mobile Number"><br><textarea placeholder="Aapka Business Konsa Hai?"></textarea><br><a class="btn" href="https://wa.me/923219536312">Send On WhatsApp →</a></form>
+<p style="margin-top:25px;font-size:18px;color:#fff"><b>WhatsApp:</b> +92 321 9536312<br><b>Email:</b> expsolhub@gmail.com<br><b>Head Office:</b> 1 Raffles Place, Marina Bay, Singapore<br><b>Website:</b> salevix.github.io</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/923219536312">💬 WhatsApp +92 321 9536312</a>
+<footer>
+<p>© 2026 SaleVix Company. All Rights Reserved. | SaleVix ONE - Every Sale. Every Detail. One Workspace.</p>
+<p style="margin-top:8px"><a href="https://salevix.github.io">salevix.github.io</a> | CEO & Developer: Muhammad Hamid | Email: expsolhub@gmail.com</p>
+<p style="margin-top:8px;font-size:13px">SaleVix ONE - First Offline, Fast & Secure POS For All Businesses - Pharmacy • Grocery • Kiryana • Pesticides • Garment • Cosmetics</p>
+</footer>
+</body>
+</html>
