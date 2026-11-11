@@ -3,217 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaleVix ONE POS - Modern Retail & Business Solution | Perfect Hands Developer's</title>
-<meta name="description" content="SaleVix ONE POS - Fast, Secure & 100% Offline POS for Pharmacy, Grocery, Garments, Pesticides & Retail Businesses. Developed by Perfect Hands Developer's.">
-<!-- Google Fonts & Font Awesome Icons -->
+<title>SaleVix ONE POS — Next-Gen Retail Workspace | Perfect Hands Developer's</title>
+<meta name="description" content="SaleVix ONE POS - The ultimate offline POS for Pharmacy, Grocery, Kiryana, Garments & Retail. Powered by Perfect Hands Developer's.">
+<!-- Google Fonts & Font Awesome -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 :root {
-  --primary: #0066ff;
-  --primary-hover: #0052cc;
-  --primary-light: #e6f0ff;
-  --accent: #00e676;
-  --dark: #090d16;
-  --dark-surface: #121826;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --bg-light: #f8fafc;
-  --border-light: #e2e8f0;
-  --radius-lg: 24px;
-  --radius-md: 16px;
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 20px 40px rgba(0, 102, 255, 0.12);
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.25);
+  --accent: #10b981;
+  --bg-dark: #030712;
+  --surface-dark: #111827;
+  --border-dark: #1f2937;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
 html { scroll-behavior: smooth; }
-body { background: #fff; color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+body { background: var(--bg-dark); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
 
-/* Top Announcement Bar */
+/* Announcement Bar */
 .topbar {
-  background: linear-gradient(90deg, #090d16, #1a233a);
+  background: linear-gradient(90deg, #1d4ed8, #2563eb, #059669);
   color: #fff;
   text-align: center;
-  padding: 10px 15px;
+  padding: 11px 20px;
   font-size: 13.5px;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-.topbar span { color: var(--accent); font-weight: 700; }
+.topbar span { background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 6px; margin-left: 5px; }
 
-/* Header & Nav */
+/* Header */
 header {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  padding: 16px 8%;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  padding: 16px 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-dark);
 }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-logo {
-  width: 42px; height: 42px; background: var(--primary); color: #fff;
+  width: 44px; height: 44px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff;
   border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 20px; box-shadow: 0 4px 12px rgba(0,102,255,0.3);
+  font-weight: 900; font-size: 22px; box-shadow: 0 0 20px var(--primary-glow);
 }
-.brand-text h1 { font-size: 20px; color: var(--dark); font-weight: 800; line-height: 1.1; }
-.brand-text h1 span { color: var(--primary); }
-.brand-text small { font-size: 10px; color: var(--text-muted); font-weight: 700; letter-spacing: 1px; display: block; }
+.brand-text h1 { font-size: 19px; color: #fff; font-weight: 800; line-height: 1.1; }
+.brand-text h1 span { color: #60a5fa; }
+.brand-text small { font-size: 10px; color: var(--text-muted); font-weight: 700; letter-spacing: 1.5px; display: block; }
 
 nav { display: flex; align-items: center; gap: 28px; }
-nav a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 14.5px; transition: 0.2s; }
-nav a:hover { color: var(--primary); }
-.nav-btn {
-  background: var(--dark); color: #fff; padding: 10px 20px; border-radius: 30px;
-  font-size: 14px; font-weight: 600; text-decoration: none; transition: 0.3s;
+nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 14.5px; transition: var(--transition); }
+nav a:hover { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.4); }
+
+.nav-cta {
+  background: #fff; color: #030712; padding: 10px 22px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; text-decoration: none; transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255,255,255,0.1);
 }
-.nav-btn:hover { background: var(--primary); transform: translateY(-2px); }
+.nav-cta:hover { background: #60a5fa; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(96,165,250,0.4); }
 
 /* Hero Section */
 .hero {
-  padding: 80px 8% 60px;
+  padding: 90px 6% 70px;
   text-align: center;
-  background: radial-gradient(circle at 50% 0%, #e6f0ff 0%, #ffffff 70%);
+  background: radial-gradient(circle at 50% 0%, #1e293b 0%, #030712 70%);
   position: relative;
 }
-.pill-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: #fff; border: 1px solid #cce0ff; color: var(--primary);
-  padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 12.5px;
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.08); margin-bottom: 24px;
+.hero::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 300px; background: var(--primary-glow); filter: blur(120px); z-index: 0; pointer-events: none;
 }
-.hero h2 { font-size: 56px; font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--dark); max-width: 900px; margin: 0 auto 20px; }
-.hero h2 span { background: linear-gradient(90deg, #0066ff, #00c2ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero p { max-width: 720px; margin: 0 auto 32px; color: var(--text-muted); font-size: 18px; font-weight: 400; }
-.cta-group { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero > * { position: relative; z-index: 1; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(31, 41, 55, 0.7); border: 1px solid var(--border-dark); color: #60a5fa;
+  padding: 8px 20px; border-radius: 30px; font-weight: 700; font-size: 12.5px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4); margin-bottom: 24px;
+}
+.hero h2 { font-size: 60px; font-weight: 900; line-height: 1.08; letter-spacing: -2px; color: #fff; max-width: 950px; margin: 0 auto 20px; }
+.hero h2 span { background: linear-gradient(90deg, #60a5fa, #38bdf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { max-width: 760px; margin: 0 auto 36px; color: var(--text-muted); font-size: 18px; font-weight: 400; }
+
+.btn-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
 .btn {
   padding: 16px 36px; border-radius: 40px; font-weight: 700; font-size: 15px;
-  text-decoration: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
+  text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
 }
-.btn-primary { background: var(--primary); color: #fff; box-shadow: var(--shadow-lg); }
-.btn-primary:hover { background: var(--primary-hover); transform: translateY(-3px); }
-.btn-dark { background: var(--dark); color: #fff; }
-.btn-dark:hover { background: #1a233a; transform: translateY(-3px); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 30px var(--primary-glow); }
+.btn-primary:hover { background: #1d4ed8; transform: translateY(-3px); box-shadow: 0 15px 35px rgba(37,99,235,0.4); }
+.btn-glass { background: rgba(255,255,255,0.05); border: 1px solid var(--border-dark); color: #fff; backdrop-filter: blur(10px); }
+.btn-glass:hover { background: rgba(255,255,255,0.1); border-color: #4b5563; transform: translateY(-3px); }
 
-.hero-badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-.badge-item { background: rgba(255,255,255,0.8); backdrop-filter: blur(5px); border: 1px solid var(--border-light); padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--text-main); display: flex; align-items: center; gap: 6px; }
+.hero-stats { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.h-stat { background: var(--surface-dark); border: 1px solid var(--border-dark); padding: 10px 20px; border-radius: 20px; font-size: 13.5px; font-weight: 600; color: #d1d5db; display: flex; align-items: center; gap: 8px; }
 
-/* Demo & Video Section */
-.demo-section { padding: 40px 8% 80px; text-align: center; }
-.preview-container {
-  max-width: 1000px; margin: 0 auto; background: var(--dark);
-  padding: 12px; border-radius: 28px; box-shadow: 0 30px 70px rgba(9, 13, 22, 0.25);
+/* 
+===============================================
+=== SOFTWARE WORKSPACE SHOWCASE v2.0 ========
+===============================================
+This section replicates image_0.png, image_1.png, image_2.png
+*/
+.showcase { padding: 30px 6% 90px; text-align: center; }
+.window-frame {
+  max-width: 1050px; margin: 0 auto; background: var(--surface-dark);
+  border: 1px solid var(--border-dark); border-radius: var(--radius-xl);
+  padding: 16px; box-shadow: 0 40px 100px rgba(0,0,0,0.7); position: relative;
+  overflow: hidden; /* Important for embedded simulation */
+}
+.window-header { display: flex; align-items: center; justify-content: space-between; padding: 0 10px 14px; border-bottom: 1px solid var(--border-dark); margin-bottom: 14px; }
+.window-dots { display: flex; gap: 8px; }
+.window-dots span { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
+.window-title { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+
+.window-content img { width: 100%; border-radius: var(--radius-md); display: block; transition: opacity 0.3s; }
+.window-content video { width: 100%; display: block; border-radius: var(--radius-md); margin-top: 20px;}
+
+/* Integrated Interactive Simulation Styles */
+.workspace-simulation {
+  display: none; /* Hidden by default */
+  width: 100%; height: 600px; /* Approximate height of dashboard */
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  margin-top: 20px;
+  overflow: hidden;
   position: relative;
 }
-.preview-container img, .preview-container video { width: 100%; border-radius: 18px; display: block; }
-.video-wrapper { margin-top: 20px; border-radius: 18px; overflow: hidden; }
 
-/* Business Grid Section */
-.section { padding: 90px 8%; }
-.bg-light { background: var(--bg-light); }
-.section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
-.section-header h3 { font-size: 38px; font-weight: 800; letter-spacing: -1px; color: var(--dark); }
-.section-header p { color: var(--text-muted); font-size: 17px; margin-top: 10px; }
-
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-.card {
-  background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius-md);
-  overflow: hidden; transition: 0.3s; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
+/* Simulate the Login screen from image_1.png */
+.login-screen {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  width: 100%; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  position: absolute; top: 0; left: 0; z-index: 10;
+  transition: opacity 0.5s, transform 0.5s;
 }
-.card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
-.card-img { height: 180px; overflow: hidden; position: relative; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-.card:hover .card-img img { transform: scale(1.08); }
-.card-body { padding: 20px; flex-grow: 1; }
-.card-body h4 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--dark); display: flex; align-items: center; gap: 8px; }
-.card-body p { color: var(--text-muted); font-size: 14.5px; }
 
-/* Features Section */
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-.feature-box {
-  background: #fff; border: 1px solid var(--border-light); padding: 32px 24px;
-  border-radius: var(--radius-md); text-align: center; transition: 0.3s;
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  width: 100%; max-width: 400px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
-.feature-box:hover { border-color: var(--primary); transform: translateY(-6px); box-shadow: var(--shadow-sm); }
-.feature-icon {
-  width: 60px; height: 60px; background: var(--primary-light); color: var(--primary);
+
+.login-card h3 { font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 20px; text-align: center;}
+.login-card small { color: #60a5fa; font-size: 11px; letter-spacing: 1px; font-weight: 700;}
+
+.f-group { margin-bottom: 15px; text-align: left;}
+.f-group label { font-size: 13px; color: #d1d5db; margin-bottom: 6px; display: block; font-weight: 600;}
+.login-input {
+  width: 100%; padding: 12px 18px; border-radius: 8px; border: 1px solid var(--border-dark);
+  font-size: 14px; background: #030712; color: #fff;
+}
+.login-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-glow); outline: none;}
+
+.btn-login {
+  background: var(--primary); color: #fff; border: none; padding: 12px; border-radius: 8px;
+  width: 100%; font-weight: 700; cursor: pointer; transition: 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-login:hover { background: #1d4ed8;}
+
+/* Simulated Dashboard screen from image_2.png */
+.dashboard-screen {
+  width: 100%; height: 100%;
+  padding: 20px;
+  display: flex; flex-direction: column;
+}
+
+.sim-nav {
+  background: var(--surface-dark);
+  border: 1px solid var(--border-dark);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px;
+}
+.sim-brand { font-weight: 900; font-size: 18px; color: #fff; display: flex; align-items: center; gap: 8px;}
+.sim-brand span { width: 24px; height: 24px; background: var(--primary); border-radius: 5px; display: inline-block; }
+.sim-user { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+.sim-avatar { width: 30px; height: 30px; border-radius: 50%; background: #4b5563;}
+
+.sim-content { flex-grow: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.sim-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  padding: 20px;
+}
+.sim-card h5 { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.sim-card .metric-value { font-size: 24px; font-weight: 800; color: #fff; }
+.sim-card .metric-value span { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-left: 5px; }
+
+/* Button to toggle between image view and simulation */
+.toggle-sim {
+  margin-top: 20px;
+  background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;
+  padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 13px;
+  cursor: pointer; transition: 0.2s;
+}
+.toggle-sim:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
+
+/* Simulation State Classes */
+.simulation-active .window-content { opacity: 0; pointer-events: none; }
+.simulation-active .workspace-simulation { display: block; }
+.logged-in .login-screen { opacity: 0; pointer-events: none; transform: translateY(-10px); }
+
+/* =============================================== */
+
+/* Sections */
+.section { padding: 90px 6%; position: relative; }
+.section-title { text-align: center; max-width: 750px; margin: 0 auto 60px; }
+.section-title h3 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; color: #fff; margin-bottom: 12px; }
+.section-title p { color: var(--text-muted); font-size: 17px; }
+
+/* Business Grid */
+.b-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.b-card {
+  background: var(--surface-dark); border: 1px solid var(--border-dark); border-radius: var(--radius-lg);
+  overflow: hidden; transition: var(--transition); display: flex; flex-direction: column;
+}
+.b-card:hover { border-color: var(--primary); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+.b-card-img { height: 190px; overflow: hidden; position: relative; }
+.b-card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+.b-card:hover .b-card-img img { transform: scale(1.1); }
+.b-card-body { padding: 24px; flex-grow: 1; }
+.b-card-body h4 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: #fff; display: flex; align-items: center; gap: 10px; }
+.b-card-body p { color: var(--text-muted); font-size: 14.5px; }
+
+/* Feature Cards */
+.feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.feat-card {
+  background: var(--surface-dark); border: 1px solid var(--border-dark); padding: 36px 28px;
+  border-radius: var(--radius-lg); transition: var(--transition); position: relative; overflow: hidden;
+}
+.feat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0; transition: var(--transition);
+}
+.feat-card:hover { border-color: #374151; transform: translateY(-8px); }
+.feat-card:hover::before { opacity: 1; }
+.feat-icon {
+  width: 60px; height: 60px; background: rgba(37,99,235,0.1); color: #60a5fa;
   border-radius: 16px; display: flex; align-items: center; justify-content: center;
-  font-size: 24px; margin: 0 auto 20px;
+  font-size: 24px; margin-bottom: 24px; border: 1px solid rgba(37,99,235,0.2);
 }
-.feature-box h4 { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
-.feature-box p { color: var(--text-muted); font-size: 14px; }
+.feat-card h4 { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+.feat-card p { color: var(--text-muted); font-size: 14.5px; }
 
 /* Stats Bar */
-.stats-bar {
-  background: var(--dark); color: #fff; border-radius: var(--radius-lg);
-  padding: 50px 6%; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px; text-align: center; margin: 0 8%;
+.metrics-bar {
+  background: linear-gradient(135deg, #111827, #030712); border: 1px solid var(--border-dark);
+  border-radius: var(--radius-xl); padding: 50px 6%; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; margin: 0 6%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
-.stat-item h4 { font-size: 44px; font-weight: 800; color: var(--accent); line-height: 1; }
-.stat-item p { color: #94a3b8; font-size: 14px; font-weight: 600; margin-top: 8px; }
+.metric h4 { font-size: 46px; font-weight: 900; color: #34d399; line-height: 1; }
+.metric p { color: var(--text-muted); font-size: 13.5px; font-weight: 700; letter-spacing: 1px; margin-top: 10px; }
 
-/* CEO Profile Section */
-.ceo-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
-  border: 1px solid var(--border-light); border-radius: var(--radius-lg);
-  padding: 48px; display: flex; align-items: center; gap: 40px; box-shadow: var(--shadow-sm);
+/* CEO Profile */
+.ceo-box {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border: 1px solid var(--border-dark); border-radius: var(--radius-xl);
+  padding: 50px; display: flex; align-items: center; gap: 50px; box-shadow: 0 30px 60px rgba(0,0,0,0.4);
 }
-.ceo-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 6px solid #fff; box-shadow: var(--shadow-lg); flex-shrink: 0; }
-.ceo-info small { color: var(--primary); font-weight: 800; letter-spacing: 1.5px; font-size: 12px; }
-.ceo-info h3 { font-size: 30px; font-weight: 800; color: var(--dark); margin: 4px 0 12px; }
-.ceo-info p { color: var(--text-muted); font-size: 16px; font-style: italic; line-height: 1.7; }
-.ceo-info b { color: var(--dark); display: block; margin-top: 14px; font-style: normal; }
+.ceo-avatar { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); box-shadow: 0 0 30px var(--primary-glow); flex-shrink: 0; }
+.ceo-content small { color: #60a5fa; font-weight: 800; letter-spacing: 2px; font-size: 12px; }
+.ceo-content h3 { font-size: 32px; font-weight: 900; color: #fff; margin: 6px 0 16px; }
+.ceo-content p { color: var(--text-muted); font-size: 16.5px; font-style: italic; line-height: 1.8; }
+.ceo-content b { color: #fff; display: block; margin-top: 16px; font-style: normal; }
 
-/* Trial CTA Box */
-.trial-box {
-  background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
-  color: #fff; text-align: center; padding: 70px 6%; border-radius: var(--radius-lg); margin: 0 8%;
+/* Trial Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 50%, #030712 100%);
+  color: #fff; text-align: center; padding: 80px 6%; border-radius: var(--radius-xl); margin: 0 6%;
+  border: 1px solid rgba(96, 165, 250, 0.3); box-shadow: 0 30px 80px rgba(37,99,235,0.3);
 }
-.trial-box h3 { font-size: 36px; font-weight: 800; margin-bottom: 12px; }
-.trial-box p { color: #94a3b8; max-width: 600px; margin: 0 auto 30px; font-size: 16px; }
+.cta-banner h3 { font-size: 40px; font-weight: 900; margin-bottom: 16px; letter-spacing: -1px; }
+.cta-banner p { color: #bfdbfe; max-width: 650px; margin: 0 auto 36px; font-size: 17px; }
 
 /* Contact Section */
-.contact-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-.form-group { margin-bottom: 16px; text-align: left; }
-.form-group label { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 6px; display: block; }
-.form-control {
-  width: 100%; padding: 14px 18px; border-radius: 12px; border: 1px solid var(--border-light);
-  font-size: 15px; outline: none; transition: 0.2s; background: var(--bg-light);
+.contact-wrap { max-width: 650px; margin: 0 auto; background: var(--surface-dark); padding: 45px; border-radius: var(--radius-xl); border: 1px solid var(--border-dark); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.f-group { margin-bottom: 20px; text-align: left; }
+.f-group label { font-size: 13px; font-weight: 700; color: #d1d5db; margin-bottom: 8px; display: block; }
+.f-input {
+  width: 100%; padding: 15px 20px; border-radius: var(--radius-md); border: 1px solid var(--border-dark);
+  font-size: 15px; outline: none; transition: var(--transition); background: #030712; color: #fff;
 }
-.form-control:focus { border-color: var(--primary); background: #fff; box-shadow: 0 0 0 4px rgba(0,102,255,0.1); }
-textarea.form-control { height: 110px; resize: none; }
+.f-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-glow); }
+textarea.f-input { height: 120px; resize: none; }
 
-/* Floating WhatsApp Button */
-.whatsapp-float {
-  position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff;
-  padding: 14px 24px; border-radius: 50px; font-weight: 700; font-size: 15px;
-  text-decoration: none; z-index: 9999; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-  display: flex; align-items: center; gap: 10px; transition: 0.3s;
+/* WhatsApp Float */
+.wa-float {
+  position: fixed; bottom: 25px; right: 25px; background: #25D366; color: #fff;
+  padding: 16px 26px; border-radius: 50px; font-weight: 800; font-size: 15px;
+  text-decoration: none; z-index: 9999; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+  display: flex; align-items: center; gap: 10px; transition: var(--transition);
 }
-.whatsapp-float:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5); }
+.wa-float:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(37, 211, 102, 0.7); }
 
 /* Footer */
-footer { background: var(--dark); color: #64748b; text-align: center; padding: 40px 8%; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); }
-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+footer { background: #030712; color: var(--text-muted); text-align: center; padding: 50px 6%; font-size: 14px; border-top: 1px solid var(--border-dark); }
+footer a { color: #34d399; text-decoration: none; font-weight: 700; }
 
 @media(max-width: 850px){
   .hero h2 { font-size: 38px; }
-  .ceo-card { flex-direction: column; text-align: center; padding: 30px; }
+  .ceo-box { flex-direction: column; text-align: center; padding: 30px; }
   nav { display: none; }
+  .workspace-simulation { height: 400px; } /* Adjust sim height for mobile */
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">✨ <b>SaleVix ONE POS is LIVE</b> — Start Your <span>FREE 3 Days Trial Today</span> ✨</div>
+<div class="topbar">⚡ SaleVix ONE POS v1.0 is LIVE — Claim Your <span>FREE 3 Days Trial</span> Now! ⚡</div>
 
 <header>
   <a href="#" class="brand">
@@ -225,178 +349,249 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
   </a>
   <nav>
     <a href="#">Home</a>
-    <a href="#demo">Live Demo</a>
-    <a href="#business">Businesses</a>
-    <a href="#ceo">CEO</a>
-    <a href="#contact">Contact</a>
+    <a href="#demo">Live Showcase</a>
+    <a href="#business">Industries</a>
+    <a href="#ceo">Leadership</a>
+    <a href="#contact">Connect</a>
   </nav>
-  <a href="https://wa.me/923219536312" class="nav-btn">Get Free Trial</a>
+  <a href="https://wa.me/923219536312" class="nav-cta">Get Free Trial</a>
 </header>
 
 <section class="hero">
-  <div class="pill-badge"><i class="fa-solid fa-star"></i> PERFECT HANDS DEVELOPER'S • VERSION 1.0</div>
+  <div class="pill"><i class="fa-solid fa-bolt-lightning" style="color: #38bdf8;"></i> PERFECT HANDS DEVELOPER'S • NEXT-GEN POS</div>
   <h2>Every Sale. Every Detail.<br><span>One Unified Workspace.</span></h2>
-  <p><b>SaleVix ONE POS</b> – Shop owners ke liye ek complete, fast aur 100% offline retail solution. Stock, Billing, Ledger aur Daily Profit ko control karein ek hi aasan jagah par.</p>
+  <p><b>SaleVix ONE POS</b> – Shop owners aur retailers ke liye sab se fast, secure aur 100% offline point-of-sale solution. Stock, Billing, aur Khata ab ek hi screen par.</p>
   
-  <div class="cta-group">
+  <div class="btn-group">
     <a class="btn btn-primary" href="#demo"><i class="fa-solid fa-play"></i> Watch Live Demo</a>
-    <a class="btn btn-dark" href="https://wa.me/923219536312"><i class="fa-brands fa-whatsapp"></i> Start 3-Day FREE Trial</a>
+    <a class="btn btn-glass" href="https://wa.me/923219536312"><i class="fa-brands fa-whatsapp"></i> Start 3-Day Free Trial</a>
   </div>
 
-  <div class="hero-badges">
-    <div class="badge-item"><i class="fa-solid fa-bolt" style="color: #eab308;"></i> 100% Offline</div>
-    <div class="badge-item"><i class="fa-solid fa-shield-halved" style="color: #22c55e;"></i> Ultra Secure</div>
-    <div class="badge-item"><i class="fa-solid fa-gauge-high" style="color: #3b82f6;"></i> Lightning Fast</div>
-    <div class="badge-item"><i class="fa-solid fa-star" style="color: #f59e0b;"></i> 4.9/5 Rated</div>
+  <div class="hero-stats">
+    <div class="h-stat"><i class="fa-solid fa-wifi-slash" style="color: #34d399;"></i> 100% Offline Engine</div>
+    <div class="h-stat"><i class="fa-solid fa-shield-halved" style="color: #60a5fa;"></i> Military-Grade Security</div>
+    <div class="h-stat"><i class="fa-solid fa-gauge-high" style="color: #f59e0b;"></i> Lightning Fast Bill Print</div>
   </div>
 </section>
 
-<section class="demo-section" id="demo">
-  <div class="preview-container">
-    <img src="salevix-one.png" alt="SaleVix ONE POS Interface">
-    <div class="video-wrapper">
-      <video controls poster="salevix-one.png">
-        <source src="demo.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
+<section class="showcase" id="demo">
+  <div class="section-title">
+    <h3>Live Software Interface</h3>
+    <p>Aapke screens ke mutabiq tayyar kiya gaya simulation.</p>
+  </div>
+  <div class="window-frame" id="showcaseWindow">
+    <div class="window-header">
+      <div class="window-dots">
+        <span class="dot-red"></span>
+        <span class="dot-yellow"></span>
+        <span class="dot-green"></span>
+      </div>
+      <div class="window-title">SaleVix ONE POS v1.0 — Live Simulation</div>
+      <div style="width: 40px;"></div>
+    </div>
+    
+    <div class="window-content">
+      <!-- Static Image from image_0.png as fallback/default -->
+      <img src="salevix-one.png" alt="SaleVix ONE POS Workspace" id="staticImage">
+      
+      <!-- Integrated Simulation Container -->
+      <div class="workspace-simulation" id="liveSim">
+        
+        <!-- Simulate image_1.png (Login) -->
+        <div class="login-screen" id="simLoginScreen">
+          <div class="login-card">
+            <small>RETAIL WORKSPACE ACCESS</small>
+            <h3>Welcome to Salevix ONE</h3>
+            <div class="f-group">
+              <label>Username</label>
+              <input type="text" class="login-input" placeholder="admin1" value="admin1">
+            </div>
+            <div class="f-group">
+              <label>Password</label>
+              <input type="password" class="login-input" placeholder="•••••••••" value="password">
+            </div>
+            <button class="btn-login" onclick="simLogin()">Sign in to SaleVix →</button>
+          </div>
+        </div>
+        
+        <!-- Simulate image_2.png (Dashboard) -->
+        <div class="dashboard-screen">
+          <div class="sim-nav">
+            <div class="sim-brand"><span></span> SaleVix ONE</div>
+            <div class="sim-user">Welcome Back, Hamid! <div class="sim-avatar"></div></div>
+          </div>
+          <div class="sim-content">
+            <div class="sim-card">
+              <h5>Net Sales (PKR)</h5>
+              <div class="metric-value">Rs 8,000.00</div>
+            </div>
+            <div class="sim-card">
+              <h5>Sales Invoices</h5>
+              <div class="metric-value">1 <span>this month</span></div>
+            </div>
+            <div class="sim-card" style="grid-column: span 2;">
+              <h5>Sales Summary</h5>
+              <div style="height: 100px; color: var(--text-muted); font-size: 13px; text-align: center; padding-top: 30px;">[Chart Simulation]</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </div>
-  <p style="margin-top: 20px; color: var(--text-muted); font-size: 15px;">🎥 <b>Watch Video:</b> Dekhiye kaise Billing, Inventory aur Udhaar Ledger ek hi screen par manage hota hai.</p>
+  <p style="margin-top: 15px; color: var(--text-muted); font-size: 14px;">🎥 <b>Interactive Model:</b> Screen check karein ke Login ke baad Software kaisa lagta hai.</p>
+  <button class="toggle-sim" onclick="toggleSim()">Start Interactive Simulation</button>
 </section>
 
-<section class="section bg-light">
-  <div class="section-header">
-    <h3>Built For Modern Businesses</h3>
-    <p>Har qisam ke business ki zaroorat ko samjhte hue tayyar kiya gaya sab se best point of sale software.</p>
+<script>
+  const windowFrame = document.getElementById('showcaseWindow');
+  const staticImage = document.getElementById('staticImage');
+  const liveSim = document.getElementById('liveSim');
+  const loginScreen = document.getElementById('simLoginScreen');
+
+  function toggleSim() {
+    windowFrame.classList.toggle('simulation-active');
+    staticImage.style.display = windowFrame.classList.contains('simulation-active') ? 'none' : 'block';
+  }
+
+  function simLogin() {
+    liveSim.classList.add('logged-in');
+  }
+</script>
+
+<section class="section" style="background: rgba(17,24,39,0.4);" id="business">
+  <div class="section-title">
+    <h3>Engineered For All Businesses</h3>
+    <p>Chahe aap ki pharmacy ho ya supermarket, SaleVix ONE har business ke liye mukammal hai.</p>
   </div>
-  <div class="grid" id="business">
-    <div class="card">
-      <div class="card-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"></div>
-      <div class="card-body">
+  <div class="b-grid">
+    <div class="b-card">
+      <div class="b-card-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"></div>
+      <div class="b-card-body">
         <h4>💊 Pharmacy POS</h4>
-        <p>Batch numbers, expiry tracking aur formula/salt search ke sath fast medicine billing.</p>
+        <p>Batch numbers, expiry alerts aur formula/salt wise fast medicine lookup.</p>
       </div>
     </div>
-    <div class="card">
-      <div class="card-img"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"></div>
-      <div class="card-body">
+    <div class="b-card">
+      <div class="b-card-img"><img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"></div>
+      <div class="b-card-body">
         <h4>🏪 Grocery Store</h4>
-        <p>Barcode scanner support, fast receipt print aur daily essentials inventory control.</p>
+        <p>Barcode scanning, quick item entry aur daily grocery items management.</p>
       </div>
     </div>
-    <div class="card">
-      <div class="card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"></div>
-      <div class="card-body">
+    <div class="b-card">
+      <div class="b-card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"></div>
+      <div class="b-card-body">
         <h4>🛒 Supermarket</h4>
-        <p>Multi-counter setup, weighing scale integration aur comprehensive sales reporting.</p>
+        <p>Multi-counter support, weighing scale integration & deep daily reporting.</p>
       </div>
     </div>
-    <div class="card">
-      <div class="card-img"><img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?w=800&q=80"></div>
-      <div class="card-body">
+    <div class="b-card">
+      <div class="b-card-img"><img src="https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?w=800&q=80"></div>
+      <div class="b-card-body">
         <h4>🌾 Kiryana Store</h4>
-        <p>Udhaar Khata (Customer Ledger), daily hisab-kitab aur Urdu + English invoices.</p>
+        <p>Customer Udhaar Khata, daily hisab-kitab aur bilingual (Urdu+English) invoices.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="section-header">
-    <h3>Why Choose SaleVix ONE?</h3>
-    <p>Aapke business ko streamline karne aur time bachane ke liye advance features.</p>
+  <div class="section-title">
+    <h3>Advanced Core Features</h3>
+    <p>Aapke business ko efficient, secure aur error-free banane ke liye makhsoos tools.</p>
   </div>
-  <div class="features-grid">
-    <div class="feature-box">
-      <div class="feature-icon"><i class="fa-solid fa-wifi"></i></div>
-      <h4>100% Offline Work</h4>
-      <p>Internet ki zaroorat nahi. Aap ka data local PC par safe aur fast chalta hai.</p>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-icon"><i class="fa-solid fa-server"></i></div>
+      <h4>100% Offline Reliability</h4>
+      <p>Internet connection na hone par bhi aapki dukan ka kaam bilkul nahi rukega.</p>
     </div>
-    <div class="feature-box">
-      <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
-      <h4>Data Protection</h4>
-      <p>Automatic backup aur multi-user permissions (Owner, Cashier, Manager roles).</p>
+    <div class="feat-card">
+      <div class="feat-icon"><i class="fa-solid fa-user-shield"></i></div>
+      <h4>Role-Based Access</h4>
+      <p>Owner, Manager aur Cashier ke liye alag-alag secure permissions aur controls.</p>
     </div>
-    <div class="feature-box">
-      <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-      <h4>Smart Analytics</h4>
-      <p>Real-time daily profit reports, top-selling items aur stock level alerts.</p>
+    <div class="feat-card">
+      <div class="feat-icon"><i class="fa-solid fa-chart-pie"></i></div>
+      <h4>Real-Time Analytics</h4>
+      <p>Daily profit, top-selling items aur stock valuation ki instant reports.</p>
     </div>
-    <div class="feature-box">
-      <div class="feature-icon"><i class="fa-solid fa-print"></i></div>
-      <h4>Universal Thermal Print</h4>
-      <p>Har qisam ke thermal printer aur standard paper receipts ke sath fully compatible.</p>
+    <div class="feat-card">
+      <div class="feat-icon"><i class="fa-solid fa-receipt"></i></div>
+      <h4>Thermal Receipt Printing</h4>
+      <p>Standard pos thermal printers ke sath seamless aur instant receipt formatting.</p>
     </div>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat-item">
+<div class="metrics-bar">
+  <div class="metric">
     <h4>v1.0</h4>
-    <p>VERSION RELEASE</p>
+    <p>FIRST EDITION</p>
   </div>
-  <div class="stat-item">
+  <div class="metric">
     <h4>8+</h4>
-    <p>BUSINESS TYPES</p>
+    <p>BUSINESS SECTORS</p>
   </div>
-  <div class="stat-item">
+  <div class="metric">
     <h4>100%</h4>
-    <p>OFFLINE SPEED</p>
+    <p>OFFLINE POWER</p>
   </div>
-  <div class="stat-item">
+  <div class="metric">
     <h4>3 DAYS</h4>
-    <p>FREE TRIAL RISK-FREE</p>
+    <p>FREE TRIAL ACCESS</p>
   </div>
 </div>
 
 <section class="section" id="ceo">
-  <div class="ceo-card">
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="CEO" class="ceo-img">
-    <div class="ceo-info">
-      <small>LEAD DEVELOPER & CEO</small>
+  <div class="ceo-box">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="CEO" class="ceo-avatar">
+    <div class="ceo-content">
+      <small>FOUNDER & LEAD DEVELOPER</small>
       <h3>Muhammad Hamid</h3>
-      <p>“Hamara maqsad local shop owners aur business executives ko aesa powerful platform dena hai jo easy to use ho. SaleVix ONE POS se aapki dukan ka hisab hamesha clear aur tension-free rahega.”</p>
+      <p>“Hamara vision yeh hai ke har shop owner ko ek aesa premium aur effortless tool mile jisse uska hisab hamesha clear aur business automated rahe. SaleVix ONE POS isi qurbani aur mehnat ka nateeja hai.”</p>
       <b>— Perfect Hands Developer's</b>
     </div>
   </div>
 </section>
 
-<div class="trial-box">
-  <h3>Ready to upgrade your retail business?</h3>
-  <p>Aap ko koi credit card ya advance payment nahi deni. Pehle 3 Din bilkul free chala kar check karein!</p>
-  <a href="https://wa.me/923219536312" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Claim 3-Days Free Trial Now</a>
+<div class="cta-banner">
+  <h3>Transform Your Retail Shop Today</h3>
+  <p>Koi credit card ya advance charges required nahi hain. Aaj hi 3 din ka free trial shuru karein!</p>
+  <a href="https://wa.me/923219536312" class="btn btn-primary" style="background: #fff; color: #1d4ed8;"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Claim 3-Days Free Trial Now</a>
 </div>
 
-<section class="section text-center" id="contact">
-  <div class="section-header">
-    <h3>Get In Touch With Us</h3>
-    <p>Farther details ya custom requirements ke liye form fill karein ya WhatsApp par contact karein.</p>
+<section class="section" id="contact">
+  <div class="section-title">
+    <h3>Get In Touch</h3>
+    <p>Kisi bhi sawal ya custom requirement ke liye humein message karein.</p>
   </div>
-  <div class="contact-container">
+  <div class="contact-wrap">
     <form>
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" class="form-control" placeholder="Aapka Naam">
+      <div class="f-group">
+        <label>Your Full Name</label>
+        <input type="text" class="f-input" placeholder="Aapka Naam">
       </div>
-      <div class="form-group">
-        <label>Business Name</label>
-        <input type="text" class="form-control" placeholder="Shop / Business Ka Naam">
+      <div class="f-group">
+        <label>Business / Shop Name</label>
+        <input type="text" class="f-input" placeholder="Dukan ka naam">
       </div>
-      <div class="form-group">
-        <label>Mobile / WhatsApp Number</label>
-        <input type="text" class="form-control" placeholder="03xx-xxxxxxx">
+      <div class="f-group">
+        <label>WhatsApp Number</label>
+        <input type="text" class="f-input" placeholder="03xx-xxxxxxx">
       </div>
-      <div class="form-group">
+      <div class="f-group">
         <label>Business Type</label>
-        <textarea class="form-control" placeholder="Pharmacy, Kiryana, Garments, etc."></textarea>
+        <textarea class="f-input" placeholder="Pharmacy, Grocery, Kiryana, etc."></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message via WhatsApp</button>
+      <a href="https://wa.me/923219536312" class="btn btn-primary" style="width: 100%; justify-content: center; border: none; text-align: center;">Send Inquiry via WhatsApp</a>
     </form>
   </div>
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/923219536312" target="_blank">
-  <i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i> WhatsApp Support
+<a class="wa-float" href="https://wa.me/923219536312" target="_blank">
+  <i class="fa-brands fa-whatsapp" style="font-size: 24px;"></i> Chat on WhatsApp
 </a>
 
 <footer>
